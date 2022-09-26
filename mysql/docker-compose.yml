@@ -8,6 +8,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: project
+    ports:
+      - 3306:3306
+    # volumes:
+    #   - /home/kdezen/Docker/mysql:/var/lib/mysql
+    
 
   adminer:
     image: adminer
